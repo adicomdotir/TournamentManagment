@@ -1,9 +1,12 @@
 package com.example.tournomentmanagement
 
-import android.support.v7.app.AppCompatActivity
+import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentTransaction
+import android.support.v7.app.AppCompatActivity
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,5 +19,9 @@ class MainActivity : AppCompatActivity() {
         val transaction: FragmentTransaction = manager.beginTransaction()
         transaction.add(R.id.container, fragment)
         transaction.commit()
+    }
+
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
     }
 }

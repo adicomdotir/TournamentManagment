@@ -1,5 +1,7 @@
 package com.example.tournomentmanagement.models
 
+import android.text.Editable
+
 class Tournament {
     var id: Int = 0
     var name: String? = null
@@ -11,7 +13,7 @@ class Tournament {
         this.password = password
     }
 
-    constructor(name: String, password: String) {
+    constructor(name: String?, password: String?) {
         this.name = name
         this.password = password
     }

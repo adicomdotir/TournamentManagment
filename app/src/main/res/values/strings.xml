@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">مدیریت تورنمنت</string>
+    <string name="new_tournament">تورنمنت جدید</string>
+    <string name="load_tournament">ادامه تورنمنت</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

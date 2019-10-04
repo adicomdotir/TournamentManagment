@@ -11,15 +11,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val fragment = MenuFragment()
         val manager: FragmentManager = supportFragmentManager
         val transaction: FragmentTransaction = manager.beginTransaction()
-
-
-        /*
-        FragmentManager manager = getSupportFragmentManager();
-        FragmentTransaction transaction = manager.beginTransaction();
-        transaction.add(frameId, fragment);
-        transaction.commit();
-         */
+        transaction.add(R.id.container, fragment)
+        transaction.commit()
     }
 }
